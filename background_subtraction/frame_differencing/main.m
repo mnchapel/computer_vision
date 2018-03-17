@@ -33,10 +33,6 @@ for i=1:n_img-1
   bg_name = sprintf(img_result_pattern_name, img_id(i+1));
   imwrite(X_bg_sub, bg_name);
   
-  if(img_id(i+1) == 21)
-    imshow(X_bg_sub);
-  endif
-  
 endfor
 fprintf('Ok. Take a look at the results folder\n');
 
