@@ -25,6 +25,7 @@ for num_frame = start_frame:last_frame
   
   % Create background subspace
   backgroundModel(W, options);
+%  backgroundModelTest(W, options); % Uncomment to test with 3 basis trajectories selected manually
   
   %plotTrajectories(num_frame, W, options);
   

@@ -19,17 +19,17 @@ function errors = projectionError(W_rand, W, rand_ids)
   nb_tracks = size(W,2);
   errors = ones(nb_tracks,1)*10e10;
   diff = P*W - W;
-  proj = P*W;
   
   
   for i=1:nb_tracks
 
     errors(i) = norm(diff(:,i));
     
-    plotOneTrajectory(W(:,i));
-    flushPrint('\tThe projection error is %f for the trajectory n°%d\n', errors(i), rand_ids(i));
-    flushPrint('Press any key\n');
-    pause();
+    % Print the trajectory i 
+%    plotOneTrajectory(W(:,i));
+%    flushPrint('\tThe projection error is %f for the trajectory n°%d\n', errors(i), rand_ids(i));
+%    flushPrint('Press any key\n');
+%    pause();
   endfor
   
 end

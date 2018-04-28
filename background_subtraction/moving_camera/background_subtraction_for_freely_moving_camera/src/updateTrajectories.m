@@ -23,7 +23,7 @@ function W = updateTrajectories(num_frame, tracks, options)
     
       id_start = num_frame-track_start_frame-options.frame_window+2; 
       id_end   = num_frame-track_start_frame+1;      
-      points     = tracks{i}.points(id_start:id_end*2);
+      points = tracks{i}.points(id_start*2-1:id_end*2);
       is_tracked = tracks{i}.is_tracked(id_start:id_end);
       ind = find(is_tracked(:) == 0);
       
