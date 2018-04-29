@@ -24,8 +24,8 @@ for num_frame = start_frame:last_frame
   flushPrint('\tThere are %d trajectories.\n', size(W,2));
   
   % Create background subspace
-  backgroundModel(W, options);
-%  backgroundModelTest(W, options); % Uncomment to test with 3 basis trajectories selected manually
+%  backgroundModel(W, options);
+  backgroundModelTest(W, options); % Uncomment to test with 3 basis trajectories selected manually
   
   %plotTrajectories(num_frame, W, options);
   

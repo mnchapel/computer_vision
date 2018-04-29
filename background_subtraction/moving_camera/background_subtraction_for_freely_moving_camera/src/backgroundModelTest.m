@@ -1,4 +1,4 @@
-function backgroundModel(W, options)
+function backgroundModelTest(W, options)
   
   % Brief:
   %
@@ -21,13 +21,16 @@ function backgroundModel(W, options)
   max_inliers = 0;
 
   Wf_mean = mean(W,2);
-%  W -= Wf_mean; % See in Shape and Motion from Image Streams under Orthography: a Factorization Method 
+  size(Wf_mean)
+  fflush(stdout)
+  W -= Wf_mean; % See in Shape and Motion from Image Streams under Orthography: a Factorization Method
   
   % RANSAC ---------------------------------------------------------------------
 %  No loop here because I selected the 3 basis trajectories manually
     
   % Select 3 trajectories randomly
-  rand_ids = [4056, 7478, 6401, rand_ids]; % I manually choose the 3 basis trajectories (trajectories with the same "shape")
+  rand_ids = randperm(nb_tracks);
+  rand_ids = [4056, 7478, 6401, 2665, rand_ids]; % I manually choose the 3 basis trajectories (trajectories with the same "shape")
   W_rand = W(:,rand_ids(1:3));
   
   % Compute the projection error for each points
