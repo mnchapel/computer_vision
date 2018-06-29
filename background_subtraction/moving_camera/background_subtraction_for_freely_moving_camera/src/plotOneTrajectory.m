@@ -7,4 +7,5 @@ function plotOneTrajectory(W)
   
   plot(x,y);
   
+  
 end
