@@ -13,8 +13,8 @@ function [start_frame, last_frame, options] = loadDataset(dataset)
   
   
   % Parameters initialization (the values come from the paper)
-  options.ransac_threshold = 0.01;
-  options.ransac_nb_inliers = 40;   % Not provided in the paper
+  options.ransac_threshold = 0.1;
+  options.ransac_nb_inliers = 5000;   % Not provided in the paper
   options.ransac_nb_iter = 1000;
   options.frame_window = 30;
   options.smoothing_parameter = 30;
